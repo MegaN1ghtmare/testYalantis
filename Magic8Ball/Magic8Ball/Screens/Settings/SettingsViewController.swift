@@ -36,7 +36,21 @@ private extension SettingsViewController {
     }
     
     @objc func addAnswer() {
-        print("add answer")
+        let alert = UIAlertController(title: "Add answer", message: "Write your answer", preferredStyle: .alert)
+
+        alert.addTextField { (textField) in
+            textField.placeholder = "....."
+        }
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self, weak alert] (_) in
+            if let textField = alert?.textFields?.first,
+               let newAnswer = textField.text {
+                Constants.defaultAnswers.insert(newAnswer, at: 0)
+                self?.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+            }
+        }))
+
+        self.present(alert, animated: true, completion: nil)
     }
     
     func setupTableView() {
