@@ -5,4 +5,8 @@
 //  Created by mac on 23.10.2021.
 //
 
-import Foundation
+import UIKit
+
+class SettingsViewController: UIViewController {
+    
+}

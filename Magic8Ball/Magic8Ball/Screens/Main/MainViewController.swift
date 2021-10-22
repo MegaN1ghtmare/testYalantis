@@ -55,7 +55,9 @@ private extension MainViewController {
     }
     
     @objc func openSettings() {
-        print("4213141 2131413213 21312r4241")
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let settingsViewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController")
+        navigationController?.present(settingsViewController, animated: true, completion: nil)
     }
     
     func rotateBall() {

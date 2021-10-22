@@ -16,6 +16,7 @@
 		04B6868C27235AE500284BFD /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6868B27235AE500284BFD /* ReachabilityManager.swift */; };
 		04B6868E27235F9100284BFD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6868D27235F9100284BFD /* NetworkManager.swift */; };
 		04B68690272373A000284BFD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B6868F272373A000284BFD /* SettingsViewController.swift */; };
+		04B686922723742900284BFD /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B686912723742900284BFD /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		04B6868B27235AE500284BFD /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		04B6868D27235F9100284BFD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		04B6868F272373A000284BFD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		04B686912723742900284BFD /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				04B6868F272373A000284BFD /* SettingsViewController.swift */,
+				04B686912723742900284BFD /* Settings.storyboard */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				04B6867D27233EC900284BFD /* LaunchScreen.storyboard in Resources */,
 				04B6867A27233EC900284BFD /* Assets.xcassets in Resources */,
 				04B6867827233EC200284BFD /* Main.storyboard in Resources */,
+				04B686922723742900284BFD /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
