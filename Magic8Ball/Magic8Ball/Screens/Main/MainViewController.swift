@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     private var isBallUp = true {
         didSet {
             rotateBall()
+            requestAnswer()
         }
     }
     
@@ -42,6 +43,20 @@ private extension MainViewController {
             ballImageView.image = UIImage(named: "ballWith8")
         } else {
             ballImageView.image = UIImage(named: "emptyBall")
+        }
+    }
+    
+    func requestAnswer() {
+        guard !isBallUp else {
+            return
+        }
+        
+        if Reachability.isConnectedToNetwork() {
+            NetworkManager.getMagicAnswer { answer in
+                print(answer)
+            }
+        } else {
+            print("default answer")
         }
     }
 }
