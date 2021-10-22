@@ -28,6 +28,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder()
+        
+        setupView()
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -39,6 +41,23 @@ class MainViewController: UIViewController {
 
 // MARK: - private methods
 private extension MainViewController {
+    func setupView() {
+        title = "Shake that ball!"
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar() {
+        let openSettingsButton = UIBarButtonItem(image: UIImage(systemName: "gear"),
+                                                 style: .done,
+                                                 target: self,
+                                                 action: #selector(openSettings))
+        navigationItem.setRightBarButton(openSettingsButton, animated: false)
+    }
+    
+    @objc func openSettings() {
+        print("4213141 2131413213 21312r4241")
+    }
+    
     func rotateBall() {
         if isBallUp {
             ballImageView.image = UIImage(named: "ballWith8")
