@@ -80,12 +80,16 @@ private extension MainViewController {
                     if let answer = response {
                         self?.answerLabel.text = answer
                     } else {
-                        print("default answer")
+                        self?.showDefaultAnswer()
                     }
                 }
             }
         } else {
-            print("default answer")
+            showDefaultAnswer()
         }
+    }
+    
+    func showDefaultAnswer() {
+        answerLabel.text = Constants.defaultAnswers.randomElement()
     }
 }
