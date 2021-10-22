@@ -11,6 +11,12 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var ballImageView: UIImageView!
     
+    private var isBallUp = false {
+        didSet {
+            rotateBall()
+        }
+    }
+    
     override var canBecomeFirstResponder: Bool {
         get {
             return true
@@ -24,7 +30,18 @@ class MainViewController: UIViewController {
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            print("Earth quake...")
+            isBallUp.toggle()
+        }
+    }
+}
+
+// MARK: - private methods
+private extension MainViewController {
+    func rotateBall() {
+        if isBallUp {
+            ballImageView.image = UIImage(named: "ballWith8")
+        } else {
+            ballImageView.image = UIImage(named: "emptyBall")
         }
     }
 }
