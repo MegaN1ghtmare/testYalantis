@@ -57,7 +57,7 @@ private extension MainViewController {
     @objc func openSettings() {
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let settingsViewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController")
-        navigationController?.present(settingsViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(settingsViewController, animated: true)
     }
     
     func rotateBall() {
