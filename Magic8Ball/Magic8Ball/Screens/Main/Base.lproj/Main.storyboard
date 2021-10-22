@@ -14,8 +14,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ballWith8" translatesAutoresizingMaskIntoConstraints="NO" id="u4q-yR-5xQ">
+                                <rect key="frame" x="7" y="188" width="400" height="555"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Jfw-5b-M4F"/>
+                                    <constraint firstAttribute="height" constant="555" id="jiC-ZQ-Ezs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u4q-yR-5xQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="dmn-Ja-lJy"/>
+                            <constraint firstItem="u4q-yR-5xQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k5e-ZB-jcf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="APg-bR-isV"/>
                 </viewController>
@@ -42,4 +55,7 @@
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ballWith8" width="400" height="400"/>
+    </resources>
 </document>
