@@ -8,8 +8,8 @@
 import Foundation
 
 final class Constants {
-    var defaultAnswers = ["It is decidedly so", "Without a doubt",
-                          "Yes — definitely", "You may rely on it",
-                          "Signs point to yes", "Ask again later",
-                          "My sources say no", "No"]
+    static var defaultAnswers = ["It is decidedly so", "Without a doubt",
+                                 "Yes — definitely", "You may rely on it",
+                                 "Signs point to yes", "Ask again later",
+                                 "My sources say no", "No"]
 }

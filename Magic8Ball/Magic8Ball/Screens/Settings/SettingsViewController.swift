@@ -24,6 +24,7 @@ private extension SettingsViewController {
     func setupView() {
         title = "Settings"
         setupNavigationBar()
+        setupTableView()
     }
     
     func setupNavigationBar() {
@@ -36,5 +37,32 @@ private extension SettingsViewController {
     
     @objc func addAnswer() {
         print("add answer")
+    }
+    
+    func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+}
+
+extension SettingsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            Constants.defaultAnswers.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+}
+
+extension SettingsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Constants.defaultAnswers.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = Constants.defaultAnswers[indexPath.item]
+        
+        return cell
     }
 }
