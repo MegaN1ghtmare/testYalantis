@@ -22,16 +22,30 @@
                                     <constraint firstAttribute="height" constant="555" id="jiC-ZQ-Ezs"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ktj-Os-hTJ">
+                                <rect key="frame" x="132" y="425.5" width="150" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="FHd-95-Uyt"/>
+                                    <constraint firstAttribute="height" constant="80" id="NsG-yX-yPj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ktj-Os-hTJ" firstAttribute="centerX" secondItem="u4q-yR-5xQ" secondAttribute="centerX" id="4Lq-dR-X6w"/>
                             <constraint firstItem="u4q-yR-5xQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="dmn-Ja-lJy"/>
                             <constraint firstItem="u4q-yR-5xQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k5e-ZB-jcf"/>
+                            <constraint firstItem="Ktj-Os-hTJ" firstAttribute="centerY" secondItem="u4q-yR-5xQ" secondAttribute="centerY" id="r9i-km-dki"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="APg-bR-isV"/>
                     <connections>
+                        <outlet property="answerLabel" destination="Ktj-Os-hTJ" id="8fj-Go-Pey"/>
                         <outlet property="ballImageView" destination="u4q-yR-5xQ" id="B5D-lm-Awh"/>
                     </connections>
                 </viewController>

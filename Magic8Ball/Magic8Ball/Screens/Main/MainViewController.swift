@@ -10,6 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var ballImageView: UIImageView!
+    @IBOutlet weak var answerLabel: UILabel!
     
     private var isBallUp = true {
         didSet {
@@ -48,12 +49,19 @@ private extension MainViewController {
     
     func requestAnswer() {
         guard !isBallUp else {
+            answerLabel.text = nil
             return
         }
         
         if Reachability.isConnectedToNetwork() {
-            NetworkManager.getMagicAnswer { answer in
-                print(answer)
+            NetworkManager.getMagicAnswer { [weak self] response in
+                DispatchQueue.main.async {
+                    if let answer = response {
+                        self?.answerLabel.text = answer
+                    } else {
+                        print("default answer")
+                    }
+                }
             }
         } else {
             print("default answer")
