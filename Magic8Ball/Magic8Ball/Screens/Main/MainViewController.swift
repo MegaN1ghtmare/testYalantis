@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var ballImageView: UIImageView!
     
-    private var isBallUp = false {
+    private var isBallUp = true {
         didSet {
             rotateBall()
         }
