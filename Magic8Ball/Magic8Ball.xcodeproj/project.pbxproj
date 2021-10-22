@@ -56,15 +56,63 @@
 		04B6866F27233EC100284BFD /* Magic8Ball */ = {
 			isa = PBXGroup;
 			children = (
-				04B6867027233EC100284BFD /* AppDelegate.swift */,
-				04B6867227233EC100284BFD /* SceneDelegate.swift */,
-				04B6867427233EC100284BFD /* ViewController.swift */,
-				04B6867627233EC200284BFD /* Main.storyboard */,
-				04B6867927233EC900284BFD /* Assets.xcassets */,
-				04B6867B27233EC900284BFD /* LaunchScreen.storyboard */,
-				04B6867E27233EC900284BFD /* Info.plist */,
+				04B686892723408A00284BFD /* Config */,
+				04B6868427233F8900284BFD /* Resourses */,
+				04B6868527233FCC00284BFD /* Screens */,
 			);
 			path = Magic8Ball;
+			sourceTree = "<group>";
+		};
+		04B6868427233F8900284BFD /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				04B6867927233EC900284BFD /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		04B6868527233FCC00284BFD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				04B6868627233FE900284BFD /* Launch */,
+				04B686872723400A00284BFD /* Main */,
+				04B686882723402F00284BFD /* Settings */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		04B6868627233FE900284BFD /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				04B6867B27233EC900284BFD /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		04B686872723400A00284BFD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				04B6867427233EC100284BFD /* ViewController.swift */,
+				04B6867627233EC200284BFD /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		04B686882723402F00284BFD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		04B686892723408A00284BFD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				04B6867027233EC100284BFD /* AppDelegate.swift */,
+				04B6867227233EC100284BFD /* SceneDelegate.swift */,
+				04B6867E27233EC900284BFD /* Info.plist */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PYVC3TK6T;
-				INFOPLIST_FILE = Magic8Ball/Info.plist;
+				INFOPLIST_FILE = Magic8Ball/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PYVC3TK6T;
-				INFOPLIST_FILE = Magic8Ball/Info.plist;
+				INFOPLIST_FILE = Magic8Ball/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
