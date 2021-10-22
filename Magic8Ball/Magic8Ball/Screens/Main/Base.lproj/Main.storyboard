@@ -31,6 +31,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="APg-bR-isV"/>
+                    <connections>
+                        <outlet property="ballImageView" destination="u4q-yR-5xQ" id="B5D-lm-Awh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
