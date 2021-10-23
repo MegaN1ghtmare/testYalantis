@@ -10,12 +10,18 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var switchLable: UILabel!
+    @IBOutlet weak var answerSourceSwitch: UISwitch!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder()
         
         setupView()
+    }
+    
+    @IBAction func switchTapped(_ sender: Any) {
+        Constants.useDefaultAnswersPermanently = answerSourceSwitch.isOn
     }
 }
 
@@ -23,8 +29,15 @@ class SettingsViewController: UIViewController {
 private extension SettingsViewController {
     func setupView() {
         title = "Settings"
+        
+        setupSwitch()
         setupNavigationBar()
         setupTableView()
+    }
+    
+    func setupSwitch() {
+        switchLable.text = "Use hardcode answers permanently"
+        answerSourceSwitch.isOn = Constants.useDefaultAnswersPermanently
     }
     
     func setupNavigationBar() {

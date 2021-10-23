@@ -74,7 +74,8 @@ private extension MainViewController {
             return
         }
         
-        if Reachability.isConnectedToNetwork() {
+        if Reachability.isConnectedToNetwork(),
+           !Constants.useDefaultAnswersPermanently {
             NetworkManager.getMagicAnswer { [weak self] response in
                 DispatchQueue.main.async {
                     if let answer = response {

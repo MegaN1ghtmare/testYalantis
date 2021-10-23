@@ -12,4 +12,5 @@ final class Constants {
                                  "Yes — definitely", "You may rely on it",
                                  "Signs point to yes", "Ask again later",
                                  "My sources say no", "No"]
+    static var useDefaultAnswersPermanently = false
 }
